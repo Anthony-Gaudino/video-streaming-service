@@ -1,28 +1,23 @@
 # spring-boot-streaming
-spring-boot, video streaming, jpa, lombok
+Spring Boot, video streaming, Plyr
 
 
-![capture](https://raw.githubusercontent.com/tinywind/spring-boot-streaming/master/capture.png "comment")
+![capture](https://raw.githubusercontent.com/Anthony-Gaudino/video-streaming-service/master/capture.jpg "Screenshot of Project")
 
+# About
+This is a simplified version of https://github.com/tinywind/video-streaming-service.
 
-# How to Play: Method 1
-* Install maven3, jdk1.8
-* compile command: `$ mvn compile`
-* run command: `$ mvn spring-boot:run -Dvideo.root="{your video directory path}"`
+All database related code was removed, and the self coded video player is replaced by Plyr, the project is updated to Spring Boot 2.0.0 and Java 9, many dependencies were removed, other minor changes.
 
-# How to Play: Method 2
-* Install jdk1.8
-* run command: `$ java -Dvideo.root="{your video directory path}" -jar {project base path}/spring-boot-streaming-0.1.war`
+# Usage
+* Edit **Constants.java**, change `String path` to a directory containing the served files
+* Edit **show.jsp**, change the `poster.jpg`, `video.mp4`, `video.webm` and `captions.vtt` to whatever your files names are.
+* Install jdk1.9
+* On the project root run `$ ./mvnw install`
+* Then run: `$ ./mvnw spring-boot:run`
+* On a web browser, visit `http://localhost:8080`
 
-# Using Framework/Tools
-* spring-boot
-* jpa
-* h2 database
-* lombok
-
-**If fail compile on any IDE, you check the IDE support _lombok_.** 
-
-References
+# References
 * http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle
 * http://millky.com/@origoni/post/1100
 * http://march3samwuli.tistory.com/entry/Step-1-%EC%9D%8C%EC%95%85-%EC%8A%A4%ED%8A%B8%EB%A6%AC%EB%B0%8D-%EC%84%9C%EB%B2%84Spring-boot-%EC%95%B1Android%EC%9D%84-%EB%A7%8C%EB%93%A4%EC%96%B4%EB%B3%B4%EC%9E%90
@@ -31,9 +26,3 @@ References
 * https://msdn.microsoft.com/ko-kr/library/hh924823(v=vs.85).aspx
 * http://gingertech.net/2009/08/19/jumping-to-time-offsets-in-videos/ 
 * https://ko.wikipedia.org/wiki/HTML5_%EB%B9%84%EB%94%94%EC%98%A4
-
-
-# Why I work this project?
-* `심심해서...`
-* `요즘 할 일이 없어서......`
-* ~~`여친의 존재 유무에 따라.........`~~
